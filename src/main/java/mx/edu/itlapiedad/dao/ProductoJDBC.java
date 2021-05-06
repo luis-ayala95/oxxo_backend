@@ -24,10 +24,12 @@ String sql;
 	sql = "insert into productos (descripcion,precio,codigo_barras,existencia) values (?,?,?,?)";
 	conexion.update(sql,pro.getDescripcion(),pro.getPrecio(), pro.getCodigo_barras(), pro.getExistencia());
 	}
+	
 	@Override
-	public Producto buscarProducto(int id_producto) {
+	public List<Producto> consultarId(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		sql="select * from productos where id=?";
+		return  conexion.query(sql, new ProductoRM(),id);
 	}
 	
 	
