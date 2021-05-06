@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import mx.edu.itlapiedad.dao.ProductoDAO;
 import mx.edu.itlapiedad.models.Producto;
 
+
+
 @RestController
 @RequestMapping("/devops")
 public class mensaje {
@@ -22,7 +24,7 @@ public class mensaje {
 		
 	}
 	@GetMapping("consulta")
-	public List<Producto> consultarProductos(){
+	public List<Producto>consultarProductos(){
 		return repositorio.consultar();
 	}
 }
