@@ -18,5 +18,17 @@ String sql;
 		sql = "SELECT * FROM productos";
 		return conexion.query(sql, new ProductoRM());
 	}
+	@Override
+	public void insertarProducto(Producto pro) {
+		// TODO Auto-generated method stub
+	sql = "insert into productos (descripcion,precio,codigo_barras,existencia) values (?,?,?,?)";
+	conexion.update(sql,pro.getDescripcion(),pro.getPrecio(), pro.getCodigo_barras(), pro.getExistencia());
+	}
+	@Override
+	public Producto buscarProducto(int id_producto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	
 }
