@@ -19,4 +19,10 @@ String sql;
 		return conexion.query(sql, new ProductoRM());
 	}
 	
+	public void insertarProducto(Producto pro) {
+		// TODO Auto-generated method stub
+	sql = "insert into productos (descripcion,precio,codigo_barras,existencia) values (?,?,?,?)";
+	conexion.update(sql,pro.getDescripcion(),pro.getPrecio(), pro.getCodigo_barras(), pro.getExistencia());
+	}
+
 }
