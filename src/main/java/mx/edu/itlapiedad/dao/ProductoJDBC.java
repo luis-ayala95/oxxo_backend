@@ -25,12 +25,7 @@ String sql;
 	conexion.update(sql,pro.getDescripcion(),pro.getPrecio(), pro.getCodigo_barras(), pro.getExistencia());
 	}
 	
-	@Override
-	public List<Producto> consultarId(int id) {
-		// TODO Auto-generated method stub
-		sql="select * from productos where id=?";
-		return  conexion.query(sql, new ProductoRM(),id);
-	}
+	
 	
 	
 }
